@@ -1,0 +1,49 @@
+:root {
+  --ashGrayLight: #C9CEBD;
+  --ashGray: #B2BCAA;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.Home {
+  width: 100%;
+  background-color: #3b3b3b;
+  position: absolute;
+  top: 0;
+  padding: 0 3em;
+}
+
+.Home h1,
+.Home h2 {
+  color: white;
+}
+
+.videoWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 7rem;
+}
+
+.videoCard {
+  padding: 1rem;
+  background-color: var(--ashGrayLight);
+  width: 350px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.videoCard:hover {
+  transform: scale(1.01);
+}
+.videoCard img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.videoCard h4 {
+  text-align: left;
+}
