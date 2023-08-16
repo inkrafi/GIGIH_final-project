@@ -53,7 +53,7 @@ const Comments = () => {
       });
       // Emit event to send comment to server using Socket.io
       socket.emit('send_comment', { comment: data.comment });
-      window.location.reload();
+      window.location.reload(`${import.meta.env.VITE_VIDEOS}/${id}`);
     })
   }
 
