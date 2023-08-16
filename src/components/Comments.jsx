@@ -46,14 +46,14 @@ const Comments = () => {
     })
     .then(async() => {
       // Set pesan flash dan reset form input
-      setFlashMessage("Comment sent successfully!");
+      setFlashMessage("Comment sent successfully! *Refresh your page*");
       setData({
         username: "",
         comment: "",
       });
       // Emit event to send comment to server using Socket.io
       socket.emit('send_comment', { comment: data.comment });
-      window.location.reload(`${import.meta.env.VITE_VIDEOS}/${id}`);
+      // window.location.reload();
     })
   }
 
@@ -95,7 +95,7 @@ const Comments = () => {
             </div>
             <div>
               <label htmlFor="comment">Comment: </label>
-              <textarea onChange={(e)=>handle(e)} value={data.comment} name="comment" id="comment" cols="30" rows="3"></textarea>
+              <textarea onChange={(e)=>handle(e)} value={data.comment} name="comment" id="comment" rows="3"></textarea>
             </div>
             <button>Submit</button>
           </form>

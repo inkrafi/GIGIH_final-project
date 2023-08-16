@@ -84,6 +84,7 @@ input {
 }
 textarea {
   border-radius: 5px;
+  width: 100%;
 }
 button {
   transform: scale(0.9);
